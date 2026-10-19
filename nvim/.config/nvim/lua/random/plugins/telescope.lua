@@ -32,9 +32,6 @@ return {
       vim.keymap.set('n', '<leader>fb', builtin.marks, { desc = 'Jump to bookmarks' })
       vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = 'Recently opened files' })
       vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Find help tags' })
-      vim.keymap.set('n', '<leader>fs', function ()
-	require('persisted').load()
-      end, { desc = 'Open last session' })
     end,
   },
 }

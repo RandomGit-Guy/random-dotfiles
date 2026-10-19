@@ -25,7 +25,7 @@ return {
 	dashbord.button(
 	  'w',
 	  '󰍉  Find word',
-	  ':Telescope oldfiles<CR>'
+	  ':Telescope live_grep<CR>'
 	),
 	dashbord.button(
 	  'b',
@@ -34,13 +34,8 @@ return {
 	),
 	dashbord.button(
 	  'r',
-	  '󱐿  Recently opened files',
+	  '󱟱  Recently opened files',
 	  ':Telescope oldfiles<CR>'
-	),
-	dashbord.button(
-	  's',
-	  '󱟱  Open last session',
-	  ':lua require("persisted").load()<CR>'
 	),
 	dashbord.button(
 	  'h',
