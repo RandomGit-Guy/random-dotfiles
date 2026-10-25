@@ -1,0 +1,114 @@
+configuration {
+  modi: "drun,window";
+  show-icons: true;
+  display-drun: "";
+  drun-display-format: "{name}";
+}
+
+@import "shared/colors.rasi"
+@import "shared/fonts.rasi"
+
+window {
+  transparency: "real";
+  location: center;
+  anchor: center;
+  fullscreen: false;
+  width: 600px;
+  height: 303px;
+  x-offset: 0px;
+  y-offset: 0px;
+
+  enabled: true;
+  padding: 0px;
+  border: 2px;
+  border-color: @background-alt;
+  border-radius: 10px;
+  background-color: @background;
+  cursor: "default";
+}
+
+mainbox  {
+  enabled: true;
+  background-color: transparent;
+  children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+  enabled: true;
+  padding: 10px;
+  background-color: @background-alt;
+  text-color: @text;
+  children: [ "prompt", "entry" ];
+}
+
+prompt {
+  enabled: false;
+}
+
+textbox-prompt-colon {
+  enabled: false;
+}
+
+entry {
+  enabled: true;
+  background-color: transparent;
+  text-color: @text;
+  cursor: text;
+  placeholder: "";
+}
+
+
+listview {
+  enabled:                     true;
+  columns:                     1;
+  lines:                       4;
+  cycle:                       true;
+  dynamic:                     true;
+  scrollbar:                   false;
+  layout:                      vertical;
+  fixed-height:                true;
+  fixed-columns:               true;
+  border: 0px;
+   
+  background-color:            @background;
+  text-color:                  @foreground;
+  cursor:                      "default";
+}
+
+element {
+  enabled:                     true;
+  margin:                      5px 7px;
+  padding:                     10px;
+  background-color:            transparent;
+  text-color:                  @foreground;
+  cursor:                      pointer;
+
+  border:                      0px;
+  border-radius:               10px;
+}
+
+element normal.normal, element alternate.normal {
+  background-color:            @background;
+  text-color:                  @foreground;
+}
+
+element selected.normal {
+  background-color:            @foreground;
+  text-color:                  @text;
+}
+
+element-icon {
+  background-color:            transparent;
+  text-color:                  inherit;
+  size:                        32px;
+  cursor:                      inherit;
+}
+
+element-text {
+  background-color:            transparent;
+  text-color:                  @text;
+  highlight:                   @accent;
+  cursor:                      inherit;
+  vertical-align:              0.5;
+  horizontal-align:            0.0;
+}

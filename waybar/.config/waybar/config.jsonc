@@ -1,0 +1,46 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+
+  "modules-left": 	[ "hyprland/workspaces"],
+  "modules-center": 	[ "clock" ],
+  "modules-right": 	[ "network", "bluetooth", "wireplumber" ],
+
+  // Module-Configuring //
+  "hyprland/workspaces": 
+    {
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "clock": 
+  {
+    "locale": "de_DE.UTF-8",
+    "format": "{:%A %H:%M}"
+  },
+
+  "wireplumber": 
+  {
+    "format": "<span size='12000' rise='-1000'> </span>{volume}%",
+    "format-muted":"<span size='12000' rise='-1000'> </span>"
+  },
+
+  "bluetooth": {
+    "format": "<span size='12000' rise='-1000'>󰂲 </span>",
+    "format-on": "<span size='12000' rise='-1000'>󰂯 </span>",
+    "format-connected": "<span size='12000' rise='-1000'>󰂯 </span>"
+  },
+
+  "network": 
+  {
+    "interface": "wlan0",
+    "family": "ipv4",
+
+    "format": "<span size='12000' rise='-1000'>󰤮 </span>",
+    "format-wifi": "<span size='12000' rise='-1000'>󰤥 </span>",
+    "format-ethernet": "<span size='12000' rise='-1000'>󰌗 </span>"
+  }
+}
