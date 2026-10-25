@@ -1,54 +1,64 @@
-* { /* Make sure everything is well aligned */
-    all: unset;
+* {
+  /* Make sure everything is well aligned */
+  all: unset;
 
-    font-family: "IBM Plex Sans Regular", "JetBrainsMono Nerd Font Propo";
-    color: #eceff4;
-    font-size: 13px;
+  font-family: "IBM Plex Sans Regular", "JetBrainsMono Nerd Font Propo";
+  color: #eceff4;
+  font-size: 13px;
 
-    border: none;
-    border-radius: 0;
+  border: none;
+  border-radius: 0;
 
-    min-height: 0;
-    margin: 0;
-    padding: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 window#waybar {
-    background: #2e3440;
+  background: #2e3440;
 }
 
 #workspaces {
   padding: 1px 1px;
-  margin: 4px 0; /* Margin of all buttons */
+  margin: 4px 0;
+  /* Margin of all buttons */
   margin-left: 8px;
 }
+
 #workspaces button {
   background-color: #3b4252;
   margin: 0 4px;
-  border-radius: 10; /* Rounding of all buttons */
-  min-width: 30px; /* Width of all buttons */
+  border-radius: 10;
+  /* Rounding of all buttons */
+  min-width: 30px;
+  /* Width of all buttons */
 }
+
 #workspaces button label {
-    color: transparent;
+  color: transparent;
 }
+
 #workspaces button.active {
   background-color: #88c0d0;
-  min-width: 55px; /* Width of active button */
+  min-width: 55px;
+  /* Width of active button */
   transition: all 200ms ease-in-out;
 }
+
 #workspaces button.active label {
   color: #2e3440;
   font-family: "IBM Plex Sans"
 }
 
 #clock {
-    background: transparent;
-    font-size: 13.5px;
+  background: transparent;
+  font-size: 13.5px;
 }
 
 #wireplumber {
   margin-right: 10px;
 }
+
 #wireplumber.muted {
   color: #bf616a;
 }
@@ -57,9 +67,11 @@ window#waybar {
   margin-right: 12px;
   color: #bf616a;
 }
+
 #bluetooth.on {
   color: #eceff4;
 }
+
 #bluetooth.connected {
   color: #a3be8c;
 }
@@ -69,6 +81,8 @@ window#waybar {
   color: #bf616a;
 }
 
-#network.wifi, #network.ethernet, #network.linked {
+#network.wifi,
+#network.ethernet,
+#network.linked {
   color: #eceff4;
 }
