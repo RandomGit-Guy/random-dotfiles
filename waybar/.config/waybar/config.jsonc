@@ -9,16 +9,15 @@
 
   // Module-Configuring //
   "hyprland/workspaces": 
-    {
+  {
     "format": "{name}",
     "persistent-workspaces": {
       "*": 5
     }
   },
 
-  "clock": 
+  "clock":
   {
-    "locale": "de_DE.UTF-8",
     "format": "{:%A %H:%M}"
   },
 
@@ -36,7 +35,7 @@
 
   "network": 
   {
-    "interface": "wlan0",
+    "interface": "wlp1s0f0u10i2",
     "family": "ipv4",
 
     "format": "<span size='12000' rise='-1000'>󰤮 </span>",

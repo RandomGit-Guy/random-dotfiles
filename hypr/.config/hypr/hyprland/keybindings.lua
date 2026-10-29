@@ -2,9 +2,8 @@
 
 -- Programs
 local terminal = "kitty"
-local fileManager = "thunar"
 local dmenu = "rofi -show drun"
-local browser = "firefox"
+local browser = "librewolf"
 
 -- Keys
 local mod = "SUPER"
@@ -12,13 +11,12 @@ local mod = "SUPER"
 -- KEYBINDINGS --
 
 -- System
-hl.bind(mod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprlock -c ~/.config/hypr/hyprlock/hyprlock.conf"))
-hl.bind(mod .. " + CTRL + SHIFT + Q", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprlock -c ~/.config/hypr/hyprlock.conf"))
+hl.bind(mod .. " + CTRL + Q", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/launch.sh"))
 
 -- Window Management
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(terminal), { repeating = true })
-hl.bind(mod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mod .. " + D", hl.dsp.exec_cmd(dmenu))
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mod .. " + A", hl.dsp.exec_cmd("swaync-client -t"))
@@ -60,19 +58,19 @@ hl.bind(mod .. " + SHIFT + 5", hl.dsp.window.move({ workspace = "5" }))
 
 -- Multimedia
 hl.bind(
-	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"),
-	{ locked = true, repeating = true }
+  "XF86AudioRaiseVolume",
+  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"),
+  { locked = true, repeating = true }
 )
 hl.bind(
-	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
-	{ locked = true, repeating = true }
+  "XF86AudioLowerVolume",
+  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+  { locked = true, repeating = true }
 )
 hl.bind(
-	"XF86AudioMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
-	{ locked = true, repeating = true }
+  "XF86AudioMute",
+  hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+  { locked = true, repeating = true }
 )
 -- hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true, repeating = true })
 -- hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
