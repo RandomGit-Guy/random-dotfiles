@@ -4,6 +4,7 @@
 local terminal = "kitty"
 local dmenu = "rofi -show drun"
 local browser = "librewolf"
+local fileManager = "nautilus"
 
 -- Keys
 local mod = "SUPER"
@@ -15,10 +16,15 @@ hl.bind(mod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprlock -c ~/.config/hypr/hyprl
 hl.bind(mod .. " + CTRL + Q", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/launch.sh"))
 
+-- Screenshots
+hl.bind(mod .. " + SHIFT + F12", hl.dsp.exec_cmd("hyprshot -m output -n HDMI-A-1 --raw | satty --filename -"))
+hl.bind(mod .. " + F12", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -"))
+
 -- Window Management
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(terminal), { repeating = true })
 hl.bind(mod .. " + D", hl.dsp.exec_cmd(dmenu))
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mod .. " + A", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mod .. " + Q", hl.dsp.window.close(), { repeating = true })
 

@@ -2,7 +2,7 @@
   /* Make sure everything is well aligned */
   all: unset;
 
-  font-family: "IBM Plex Sans Regular", "JetBrainsMono Nerd Font Propo";
+  font-family: "IBM Plex Sans", "JetBrainsMono Nerd Font Propo";
   color: #eceff4;
   font-size: 13px;
 
