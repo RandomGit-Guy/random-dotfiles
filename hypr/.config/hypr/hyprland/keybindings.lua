@@ -20,6 +20,9 @@ hl.bind(mod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/launch.sh"))
 hl.bind(mod .. " + SHIFT + F12", hl.dsp.exec_cmd("hyprshot -m output -n HDMI-A-1 --raw | satty --filename -"))
 hl.bind(mod .. " + F12", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -"))
 
+-- Clipboard history
+hl.bind(mod .. " + C", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-colums 2 -p 'Search Clipboard' | cliphist decode | wl-copy"))
+
 -- Window Management
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(terminal), { repeating = true })
 hl.bind(mod .. " + D", hl.dsp.exec_cmd(dmenu))
@@ -28,7 +31,8 @@ hl.bind(mod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mod .. " + A", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mod .. " + Q", hl.dsp.window.close(), { repeating = true })
 
-hl.bind(mod .. " + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+hl.bind(mod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod .. " + S", hl.dsp.layout("togglesplit"))
 
 hl.bind(mod .. " + H", hl.dsp.focus({ direction = "left" }))

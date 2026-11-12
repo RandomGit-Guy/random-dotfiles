@@ -1,8 +1,8 @@
-vim.api.nvim_create_autocmd("BufWritePre", {
-  callback = function()
-    vim.cmd("normal! gg=G")
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   callback = function()
+--     vim.cmd("normal! gg=G")
+--   end,
+-- })
 
 local border_normal = "#4c566a"
 local border_active = "#88c0d0"
