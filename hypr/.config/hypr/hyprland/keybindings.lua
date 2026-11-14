@@ -17,11 +17,11 @@ hl.bind(mod .. " + CTRL + Q", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.exit()'"
 hl.bind(mod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/launch.sh"))
 
 -- Screenshots
-hl.bind(mod .. " + SHIFT + F12", hl.dsp.exec_cmd("hyprshot -m output -n HDMI-A-1 --raw | satty --filename -"))
-hl.bind(mod .. " + F12", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -"))
+hl.bind(mod .. " + SHIFT + F12", hl.dsp.exec_cmd('hyprshot -m output -n HDMI-A-1 --raw | satty --filename - --output-filename "$HOME/Pictures/Screenshots/$(date +%F).png"'))
+hl.bind(mod .. " + F12", hl.dsp.exec_cmd('hyprshot -m region --raw | satty --filename - --output-filename "$HOME/Pictures/Screenshots/$(date +%F).png"'))
 
 -- Clipboard history
-hl.bind(mod .. " + C", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-colums 2 -p 'Search Clipboard' | cliphist decode | wl-copy"))
+-- hl.bind(mod .. " + C", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-colums 2 -p 'Search Clipboard' | cliphist decode | wl-copy"))
 
 -- Window Management
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(terminal), { repeating = true })
