@@ -20,18 +20,18 @@ hl.config({
     rounding       = 10,
     rounding_power = 2,
 
-    active_opacity   = 0.95,
-    inactive_opacity = 0.95,
+    active_opacity   = 1,
+    inactive_opacity = 1,
 
     shadow = {
       enabled      = false;
-      range        = 20,
+      range        = 3,
       render_power = 4,
-      color        = "#2e3440",
+      color        = "#000000",
     },
 
     blur = {
-      enabled   = true,
+      enabled   = false,
       size      = 10,
       passes    = 3,
       vibrancy  = 0.1696,

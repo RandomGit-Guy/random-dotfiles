@@ -10,10 +10,6 @@ return {
       appearance = {
         nerd_font_variant = 'mono',
       },
-
-      formatting = {
-        format = require("nvim-highlight-colors").format,
-      }
     },
   },
 }
