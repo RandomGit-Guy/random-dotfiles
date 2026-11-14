@@ -2,7 +2,7 @@
   /* Make sure everything is well aligned */
   all: unset;
 
-  font-family: "IBM Plex Sans", "JetBrainsMono Nerd Font Propo";
+  font-family: "GeistMonoNerdFontPropo";
   color: #eceff4;
   font-size: 13px;
 
@@ -47,11 +47,12 @@ window#waybar {
 
 #workspaces button.active label {
   color: #2e3440;
-  font-family: "IBM Plex Sans"
+  font-family: "Geist"
 }
 
 #clock {
   background: transparent;
+  font-family: "Ghost";
   font-size: 13.5px;
 }
 
